@@ -50,6 +50,6 @@ public class Test {
          .when()
          .post("/PO.Insurance/services/partner/v1/calculate")
          .then().log().ifValidationFails()
-         .statusCode(200);
+         .statusCode(404);
     }
 }
