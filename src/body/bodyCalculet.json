@@ -1,0 +1,104 @@
+{
+  "productType": "Рисковое страхование",
+  "policyCalc": {
+    "currCode": "RUR",
+    "insCompanyName": "ООО СК «Согласие-Вита»",
+    "insuranceObjects": {
+      "objects": [
+        {
+          "name": "Объект страхования",
+          "parameters": null,
+          "riskInfo": {
+            "risks": [
+              {
+                "insured": "true",
+                "name": "${risksName}",
+                "insPrem": 4000
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "onlinePayment": false,
+    "parameters": {
+      "parameters": [
+        {
+          "code": "dogovor.vkladchikPol",
+          "name": "Возраст",
+          "stringValue": "жен.",
+          "type": "Строка"
+        },
+        {
+          "code": "dogovor.vkladchikVozrast",
+          "name": "Возраст вкладчика",
+          "intValue": "${ageIntValue}",
+          "type": "Целое"
+        },
+        {
+          "code": "dogovor.dohodvmes",
+          "name": "Среднемесячный доход",
+          "decimalValue": 60000,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.povtornyeVznosy",
+          "name": "Повторные взносы",
+          "decimalValue": 4500,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.periodichnostVznosov",
+          "name": "Периодичность повторных взносов",
+          "stringValue": "ежеквартально",
+          "type": "Строка"
+        },
+        {
+          "code": "dogovor.srokNakoplenij",
+          "intValue": 25,
+          "name": "Срок накоплений",
+          "type": "Целое"
+        },
+        {
+          "code": "dogovor.srokEzhemesVyplat",
+          "name": "Срок ежемесячных выплат",
+          "intValue": 10,
+          "type": "Целое"
+        },
+        {
+          "code": "dogovor.perevestiPensionNakopleniya",
+          "stringValue": "да",
+          "type": "Строка",
+          "name": "Сумма кредита"
+        },
+        {
+          "code": "dogovor.razmerPensionNakoplenij",
+          "name": "Сумма пенсионных накоплений по ОПС",
+          "decimalValue": 6500,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.investirovatNalogovyjVychet",
+          "stringValue": "да",
+          "type": "Строка",
+          "name": "Инвестировать налоговый вычет в программу("
+        },
+        {
+          "code": "dogovor.godDohodnostInvestSredstv",
+          "name": "Годовая доходность инвестирования средств",
+          "decimalValue": 25,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.predvRaschet",
+          "name": "Предварительный расчет",
+          "boolValue": true,
+          "type": "Логический"
+        }
+      ]
+    },
+    "product": {
+      "name": "Программа долгосрочных сбережений граждан (ПДС)"
+    }
+  }
+}
