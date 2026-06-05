@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh "mvn clean test -Dtest=\"${params.TEST_SUITE}\""
+                sh "mvn clean api -Dtest=\"${params.TEST_SUITE}\""
             }
         }
     }

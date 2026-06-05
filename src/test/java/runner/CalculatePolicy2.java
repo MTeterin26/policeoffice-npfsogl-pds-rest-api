@@ -1,7 +1,7 @@
 package runner;
 
-import test.Calculet;
-import test.Test;
+import api.Calculet;
+import api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

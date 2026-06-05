@@ -1,0 +1,150 @@
+{
+  "policy": {
+    "currCode": "RUR",
+    "insCompanyName": "ООО СК «Согласие-Вита»",
+    "comment": "Получили идеальный расчет",
+    "paymentsPlan": {
+      "payments": [
+        {
+          "number": 1,
+          "date": "2025-04-28T00:00:00.000Z",
+          "sum": 4000,
+          "sumRur": 4000
+        }
+      ]
+    },
+    "insurant": {
+      "physical": {
+        "birthDate": "1978-03-07T12:00:00.000Z",
+        "birthplace": "Гор. Лермонтов",
+        "citizenship": "Россия",
+        "document": {
+          "dateOfIssue": "2020-01-01T12:00:00.000Z",
+          "kodPodrazd": "001-001",
+          "number": "001011",
+          "placeOfIssue": "ОВД1",
+          "series": "0101",
+          "type": "ПАСПОРТ_РФ"
+        },
+        "email": "e.sergeeva@virtusystems.ru",
+        "factAddress": {
+          "postIndex": 347863,
+          "addressText": "614520, Россия, Пермский край, Пермский р-н, п.Кукуштан , ул. Чапаева, д. 1",
+          "country": "Россия",
+          "region": "Пермский"
+        },
+        "firstName": "Анна",
+        "lastName": "Аннова",
+        "middleName": "Анновна",
+        "isIP": "false",
+        "phone": "+7 (919) 124-43-86",
+        "residenceAddress": {
+          "postIndex": 340063,
+          "addressText": "Пермский край, Пермский р-н, с Гамово, ул. 50 лет Октября, д. 11",
+          "country": "Россия",
+          "region": "Пермский"
+        },
+        "sex": "F",
+        "snils": "142–770–218 47",
+        "inn": "244317039608"
+      },
+      "type": "ФЛ"
+    },
+    "insuranceObjects": {
+      "objects": [
+        {
+          "name": "Объект страхования",
+          "parameters": null,
+          "riskInfo": {
+            "risks": [
+              {
+                "insured": "true",
+                "name": "Пенсионное накопление",
+                "insPrem": 4000
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "parameters": {
+      "parameters": [
+        {
+          "code": "dogovor.vkladchikPol",
+          "name": "Возраст",
+          "stringValue": "жен.",
+          "type": "Строка"
+        },
+        {
+          "code": "dogovor.vkladchikVozrast",
+          "name": "Возраст вкладчика",
+          "intValue": "${ageIntValue}",
+          "type": "Целое"
+        },
+        {
+          "code": "dogovor.dohodvmes",
+          "name": "Среднемесячный доход",
+          "decimalValue": 60000,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.povtornyeVznosy",
+          "name": "Повторные взносы",
+          "decimalValue": 4500,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.periodichnostVznosov",
+          "name": "Периодичность повторных взносов",
+          "stringValue": "ежеквартально",
+          "type": "Строка"
+        },
+        {
+          "code": "dogovor.srokNakoplenij",
+          "name": "Срок накоплений",
+          "intValue": "${srokNakoplenij}",
+          "type": "Целое"
+        },
+        {
+          "code": "dogovor.srokEzhemesVyplat",
+          "name": "Срок ежемесячных выплат",
+          "intValue": "${srokEzhemesVyplat}",
+          "type": "Целое"
+        },
+        {
+          "code": "dogovor.perevestiPensionNakopleniya",
+          "stringValue": "да",
+          "type": "Строка",
+          "name": "Сумма кредита"
+        },
+        {
+          "code": "dogovor.razmerPensionNakoplenij",
+          "name": "Сумма пенсионных накоплений по ОПС",
+          "decimalValue": 6500,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.investirovatNalogovyjVychet",
+          "stringValue": "да",
+          "type": "Строка",
+          "name": "Инвестировать налоговый вычет в программу("
+        },
+        {
+          "code": "dogovor.godDohodnostInvestSredstv",
+          "name": "Годовая доходность инвестирования средств",
+          "decimalValue": 25,
+          "type": "Вещественный"
+        },
+        {
+          "code": "dogovor.predvRaschet",
+          "name": "Предварительный расчет",
+          "boolValue": true,
+          "type": "Логический"
+        }
+      ]
+    },
+    "product": {
+      "name": "Программа долгосрочных сбережений граждан (ПДС)"
+    }
+  }
+}

@@ -1,11 +1,13 @@
 package runner;
 
-import test.Login;
+import api.Login;
+import api.Calculet;
+import api.Import;
+import api.Issue;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import test.Test;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({ Login.class, Test.class })
+@Suite.SuiteClasses({ Login.class, Calculet.class, Import.class, Issue.class })
 public class CalculatePolicy1 {
 }

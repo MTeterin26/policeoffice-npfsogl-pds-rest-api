@@ -1,4 +1,4 @@
-package test;
+package api;
 
 import config.Config;
 import io.restassured.http.ContentType;
@@ -50,6 +50,6 @@ public class Test {
          .when()
          .post("/PO.Insurance/services/partner/v1/calculate")
          .then().log().ifValidationFails()
-         .statusCode(404);
+         .statusCode(200);
     }
 }

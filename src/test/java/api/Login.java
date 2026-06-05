@@ -1,4 +1,4 @@
-package test;
+package api;
 
 import config.Config;
 import io.restassured.RestAssured;
