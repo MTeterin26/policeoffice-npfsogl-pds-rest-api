@@ -26,7 +26,7 @@ public class TestDataInitializer {
         try {
             // 1. Загружаем тело запроса из шаблона
             String aiRequestBody = JsonFileReader.readAsString(
-                    "payloads/AiDataProvider/AiDataProvider_prompt.json"
+                    "payloads/aiDataProvider/aiDataProvider_prompt.json"
             );
 
             // 2. Отправляем запрос к ИИ

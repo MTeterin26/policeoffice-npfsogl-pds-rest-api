@@ -35,9 +35,6 @@ public class Constants {
 
     static {
         props = ConfigFactory.create(Props.class);
-        // Диагностический вывод – убеждаемся, что ключ загрузился
-        System.out.println("[Constants] server  = " + props.serverUrl());
-        System.out.println("[Constants] API_KEY = " + (props.openrouterApiKey().isEmpty() ? "ПУСТО" : "***"));
     }
 
     public static class Servers {
