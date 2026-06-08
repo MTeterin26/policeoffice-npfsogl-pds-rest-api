@@ -4,7 +4,7 @@ pipeline {
     parameters {
         choice(
             name: 'TEST_SUITE',
-            choices: ['runner.CalculatePolicy1', 'runner.CalculatePolicy2', 'runner.CalculatePolicy1,runner.CalculatePolicy2'],
+            choices: ['runner.Smoke'],
             description: 'Выберите набор тестов для запуска'
         )
     }
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh "mvn clean api -Dtest=\"${params.TEST_SUITE}\""
+                sh "mvn clean apiOLD -Dtest=\"${params.TEST_SUITE}\""
             }
         }
     }

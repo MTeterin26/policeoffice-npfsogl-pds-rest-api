@@ -2,6 +2,7 @@
   "policy": {
     "currCode": "RUR",
     "insCompanyName": "ООО СК «Согласие-Вита»",
+    "calcID": "{{calcID}}",
     "comment": "Получили идеальный расчет",
     "paymentsPlan": {
       "payments": [
@@ -33,9 +34,9 @@
           "country": "Россия",
           "region": "Пермский"
         },
-        "firstName": "Анна",
-        "lastName": "Аннова",
-        "middleName": "Анновна",
+        "firstName": "{{firstName}}",
+        "lastName": "{{lastName}}",
+        "middleName": "{{middleName}}",
         "isIP": "false",
         "phone": "+7 (919) 124-43-86",
         "residenceAddress": {
@@ -45,8 +46,8 @@
           "region": "Пермский"
         },
         "sex": "F",
-        "snils": "142–770–218 47",
-        "inn": "244317039608"
+        "snils": "{{snils}}",
+        "inn": "{{inn}}"
       },
       "type": "ФЛ"
     },
@@ -78,7 +79,7 @@
         {
           "code": "dogovor.vkladchikVozrast",
           "name": "Возраст вкладчика",
-          "intValue": "${ageIntValue}",
+          "intValue": "45",
           "type": "Целое"
         },
         {
@@ -102,13 +103,13 @@
         {
           "code": "dogovor.srokNakoplenij",
           "name": "Срок накоплений",
-          "intValue": "${srokNakoplenij}",
+          "intValue": "25",
           "type": "Целое"
         },
         {
           "code": "dogovor.srokEzhemesVyplat",
           "name": "Срок ежемесячных выплат",
-          "intValue": "${srokEzhemesVyplat}",
+          "intValue": "10",
           "type": "Целое"
         },
         {

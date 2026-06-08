@@ -12,7 +12,7 @@
             "risks": [
               {
                 "insured": "true",
-                "name": "${risksName}",
+                "name": "Пенсионное накопление",
                 "insPrem": 4000
               }
             ]
@@ -32,7 +32,7 @@
         {
           "code": "dogovor.vkladchikVozrast",
           "name": "Возраст вкладчика",
-          "intValue": "${ageIntValue}",
+          "intValue": "45",
           "type": "Целое"
         },
         {
