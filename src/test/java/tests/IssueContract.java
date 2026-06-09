@@ -1,17 +1,13 @@
 package tests;
 
-import api.AttachDocApiClient;
 import api.CalculateApiClient;
 import api.ImportApiClient;
-import api.IssueApiClient;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import setup.TestDataInitializer;
 import setup.TestDataInitializer.TestUser;
 import utils.JsonFileReader;
-import utils.TemplateResolver;
-import utils.TestDocumentUtils;
 
 import static org.hamcrest.Matchers.notNullValue;
 
@@ -19,44 +15,6 @@ public class IssueContract extends BaseTest {
 
     private final CalculateApiClient calcApi = new CalculateApiClient();
     private final ImportApiClient importApi = new ImportApiClient();
-    private final AttachDocApiClient attachApi = new AttachDocApiClient();
-    private final IssueApiClient issueApi = new IssueApiClient();
-
-    // Собирает тело запроса импорта, подставляя данные и опциональный calcID.
-    private String buildImportBody(TestUser user, String calcID) {
-        String template = JsonFileReader.readAsString("payloads/import/bodyImport.json");
-        String body = template
-                .replace("{{inn}}", user.inn())
-                .replace("{{snils}}", user.snils())
-                .replace("{{lastName}}", user.lastName())
-                .replace("{{firstName}}", user.firstName())
-                .replace("{{middleName}}", user.middleName());
-        if (calcID != null) {
-            body = body.replace("{{calcID}}", calcID);
-        }
-        return TemplateResolver.removeUnusedPlaceholders(body);
-    }
-
-    // Прикрепляем четыре обязательных документа к расчёту.
-    private void attachDocuments(String calcID) {
-        String content = TestDocumentUtils.createBase64Content();
-        attachApi.attachDocument(calcID, "test.txt", "Документ, удостоверяющий личность", content)
-                .then().statusCode(200);
-        attachApi.attachDocument(calcID, "test.txt", "Анкета для проведения идентификации клиента", content)
-                .then().statusCode(200);
-        attachApi.attachDocument(calcID, "test.txt", "Согласие на обработку ПД", content)
-                .then().statusCode(200);
-        attachApi.attachDocument(calcID, "test.txt", "Согласие на доп. услугу", content)
-                .then().statusCode(200);
-    }
-
-    //Выпуск договора
-    private void issueAndCheck(String policyID) {
-        Response issueResp = issueApi.issuePolicy(policyID);
-        issueResp.then()
-                .statusCode(200)
-                .body("policyID", notNullValue());
-    }
 
     @Test
     @Tag("smoke")
